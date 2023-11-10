@@ -1,45 +1,135 @@
-<!-- Gallery -->
-<div class="row">
-  <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
-    <img
-      src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp"
-      class="w-100 shadow-1-strong rounded mb-4"
-      alt="Boat on Calm Water"
-    />
+{% extends 'core/base.html' %}
 
-    <img
-      src="https://mdbcdn.b-cdn.net/img/Photos/Vertical/mountain1.webp"
-      class="w-100 shadow-1-strong rounded mb-4"
-      alt="Wintry Mountain Landscape"
-    />
-  </div>
+{% block intitle %}Technopy Portfolio{% endblock %}
 
-  <div class="col-lg-4 mb-4 mb-lg-0">
-    <img
-      src="https://mdbcdn.b-cdn.net/img/Photos/Vertical/mountain2.webp"
-      class="w-100 shadow-1-strong rounded mb-4"
-      alt="Mountains in the Clouds"
-    />
+{% block body%}
 
-    <img
-      src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp"
-      class="w-100 shadow-1-strong rounded mb-4"
-      alt="Boat on Calm Water"
-    />
-  </div>
-
-  <div class="col-lg-4 mb-4 mb-lg-0">
-    <img
-      src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(18).webp"
-      class="w-100 shadow-1-strong rounded mb-4"
-      alt="Waves at Sea"
-    />
-
-    <img
-      src="https://mdbcdn.b-cdn.net/img/Photos/Vertical/mountain3.webp"
-      class="w-100 shadow-1-strong rounded mb-4"
-      alt="Yosemite National Park"
-    />
-  </div>
-</div>
-<!-- Gallery -->
+<body id="page-top">
+  <!-- Navigation-->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <div class="container px-4 px-lg-5">
+      <a class="navbar-brand" href="#page-top">Technopy</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+        aria-label="Toggle navigation">
+        Menu
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#signup">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- Masthead-->
+  <header class="masthead">
+    <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
+      <div class="d-flex justify-content-center">
+        <div class="text-center">
+          <h1 class="mx-auto my-0 text-uppercase">I'm Technopy</h1>
+          <h2 class="text-white-50 mx-auto mt-2 mb-5">This is my site, get to know me!</h2>
+          <a class="btn btn-primary" href="#about">Know more</a>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- About-->
+  <section class="about-section text-center" id="about">
+    <div class="container px-4 px-lg-5">
+      <div class="row gx-4 gx-lg-5 justify-content-center">
+        <div class="col-lg-8">
+          <h2 class="text-white mb-4">A little about me</h2>
+          <p class="text-white-50">
+            My name of course is not technopy, I'm Joshua Leiva, from Santiago, Chile.
+            <br>
+            Passionate about learning, from cybersecurity, bible and coding,<br>
+            to diverse languages like english and french. 
+            <br>
+            I'm a student, photographer, ocasional writer and coder (among other things).
+            <br>
+            Praise the Lord.
+          </p>
+        </div>
+      </div>
+      <img class="img-fluid" src="assets/img/ipad.png" alt="..." />
+    </div>
+  </section>
+  <!-- Projects-->
+  <section class="projects-section bg-light" id="projects">
+    <div class="container px-4 px-lg-5">
+      <!-- Featured Project Row-->
+      <div class="row gx-0 mb-4 mb-lg-5 align-items-center">
+        {% load static %}
+        <div class="col-xl-8 col-lg-7"><img class="img-fluid mb-3 mb-lg-0" src="{% static 'assets/img/coding-bg.jpg' %}" alt="..." />
+        </div>
+        <div class="col-xl-4 col-lg-5">
+          <div class="featured-text text-center text-lg-left">
+            <h3>Coding projects</h3>
+            <p class="text-black-50 mb-0">Coming Soon...</p>
+          </div>
+        </div>
+      </div>
+      <!-- Project One Row-->
+      <div class="row gx-0 mb-5 mb-lg-0 justify-content-center">
+        <div class="col-lg-6"><img class="img-fluid" src="{% static 'assets/img/coding-bg.jpg' %}" alt="..." /></div>
+        <div class="col-lg-6">
+          <div class="bg-black text-center h-100 project">
+            <div class="d-flex h-100">
+              <div class="project-text w-100 my-auto text-center text-lg-left">
+                <h4 class="text-white">Misty</h4>
+                <p class="mb-0 text-white-50">An example of where you can put an image of a project, or anything else,
+                  along with a description.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Project Two Row-->
+      <div class="row gx-0 justify-content-center">
+        <div class="col-lg-6"><img class="img-fluid" src="{% static 'assets/img/coding-bg.jpg' %}" alt="..." /></div>
+        <div class="col-lg-6 order-lg-first">
+          <div class="bg-black text-center h-100 project">
+            <div class="d-flex h-100">
+              <div class="project-text w-100 my-auto text-center text-lg-right">
+                <h4 class="text-white">Mountains</h4>
+                <p class="mb-0 text-white-50">Another example of a project with its respective description. These
+                  sections work well responsively as well!</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Contact-->
+  <section class="contact-section bg-black">
+    <div class="container px-4 px-lg-5">
+      <div class="row gx-4 gx-lg-5">
+        <div class="col-md-12 mb-3 mb-md-0">
+          <div class="card py-4 h-100">
+            <div class="card-body text-center">
+              <i class="fas fa-envelope text-primary mb-2"></i>
+              <h4 class="text-uppercase m-0">Email</h4>
+              <hr class="my-4 mx-auto" />
+              <div class="small text-black-50"><a href="#!">josuenicolas@protonmail.com</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="social d-flex justify-content-center">
+        <a class="mx-2" href="#!"><i class="fab fa-twitter"></i></a>
+        <a class="mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>
+        <a class="mx-2" href="#!"><i class="fab fa-github"></i></a>
+      </div>
+    </div>
+  </section>
+  <!-- Footer-->
+  <footer class="footer bg-black small text-center text-white-50">
+    <div class="container px-4 px-lg-5">Copyright &copy; Technopy Portfolio 2023</div>
+  </footer>
+  {% endblock %}
+  <!-- Bootstrap core JS-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
